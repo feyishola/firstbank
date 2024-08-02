@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+  place-content: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.box-shadow {
+  box-shadow: 0px 20px 70px 0px #0000000f;
+}
+
+.login-box-shadow {
+  box-shadow: 0px 40px 70px 0px #ff7a001a;
+}
+
+.help-text {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.customer-container {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bg-svg-background {
+  background-image: url("../assets/right-leadway-image-background.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.no-border-on-focus:focus {
+  outline: none;
+  border: none;
+}
