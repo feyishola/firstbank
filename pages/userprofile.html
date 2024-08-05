@@ -1,0 +1,490 @@
+<div class="flex flex-col p-10 overflow-auto">
+  <div
+    class="w-full flex flex-col items-start justify-center gap-5 lg:items-center lg:justify-between lg:flex-row"
+  >
+    <div class="w-full flex flex-row justify-between">
+      <h1 class="text-[#34475E] text-xl mb-[34px]">User's Profile</h1>
+      <img
+        src="/assets/Back Button.svg"
+        alt="back button"
+        width="128px"
+        height="24px"
+        style="margin-bottom: 16px; cursor: pointer"
+      />
+    </div>
+  </div>
+
+  <!-- Top div -->
+  <div
+    class="relative flex flex-col gap-4 mb-10 md:gap-0 lg:gap-0 md:flex-row lg:flex-row items-center justify-center md:items-center md:justify-around lg:items-center lg:justify-around w-full px-1 md:px-8 py-4 border rounded-md border-[#D8D8D8] bg-[#FFFFFF]"
+    style="padding-right: 16px; padding-left: 16px"
+  >
+    <!-- btn -->
+    <div class="absolute right-[40px] top-[20px]" style="display: inline">
+      <img
+        src="/assets/Group 1856.svg"
+        alt="top-btn"
+        width="23px"
+        height="23px"
+        style="cursor: pointer"
+      />
+    </div>
+
+    <div
+      class="flex flex-col items-center gap-2 w-1/4 md:border-r md:border-gray-300"
+    >
+      <img
+        src="../assets/Rectangle 819.png"
+        width="170px"
+        height="170px"
+        alt="property"
+      />
+      <p>John Samuel</p>
+    </div>
+
+    <div class="flex flex-col gap-5 ml-0 md:ml-5 w-full md:w-3/4 px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Grid Item 1 -->
+        <div class="flex flex-col">
+          <p class="text-[#A3A3A3] text-xs">Name</p>
+          <p class="text-[#585858] font-normal text-sm">John Samuel</p>
+        </div>
+        <!-- Grid Item 2 -->
+        <div class="flex flex-col">
+          <p class="text-[#A3A3A3] text-xs">Manager</p>
+          <p class="text-[#585858] font-normal text-sm">Seyi Olanrewaju</p>
+        </div>
+        <!-- Grid Item 3 -->
+        <div class="flex flex-col">
+          <p class="text-[#A3A3A3] text-xs">Prospects</p>
+          <p class="text-[#585858] font-normal text-sm">5</p>
+        </div>
+        <!-- Grid Item 4 -->
+        <div class="flex flex-col">
+          <p class="text-[#A3A3A3] text-xs">Date Created</p>
+          <p class="text-[#585858] font-normal text-sm">04 Jan 2023</p>
+        </div>
+
+        <!-- Horizontal line -->
+        <div
+          class="col-span-1 md:col-span-2 lg:col-span-4 border-b border-gray-300"
+        ></div>
+
+        <!-- Grid Item 5 -->
+        <div class="flex flex-col">
+          <p class="text-[#A3A3A3] text-xs">Phone Number</p>
+          <p class="text-[#585858] font-normal text-sm">0703345456</p>
+        </div>
+        <!-- Grid Item 6 -->
+        <div class="flex flex-col">
+          <p class="text-[#A3A3A3] text-xs">Email address</p>
+          <p class="text-[#585858] font-normal text-sm">johnsam@gmail.com</p>
+        </div>
+        <!-- Grid Item 7 -->
+        <div class="flex flex-col">
+          <p class="text-[#A3A3A3] text-xs">Branch</p>
+          <p class="text-[#585858] font-normal text-sm">Lagos Branch</p>
+        </div>
+        <!-- Grid Item 8 -->
+        <div class="flex flex-col">
+          <p class="text-[#A3A3A3] text-xs"></p>
+          <p class="text-[#585858] font-normal text-sm"></p>
+        </div>
+
+        <!-- Horizontal line -->
+        <div
+          class="col-span-1 md:col-span-2 lg:col-span-4 border-b border-gray-300"
+        ></div>
+      </div>
+      <div class="flex justify-between gap-1">
+        <button
+          class="bg-[#002855] text-white p-2 rounded w-[90px] md:w-[168px] md:h-[45px]"
+        >
+          Edit Profile
+        </button>
+        <button
+          class="bg-[#C61531] text-white p-2 rounded w-[90px] md:w-[168px] md:h-[45px]"
+        >
+          Suspend
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom div -->
+
+  <!-- toggle buttons -->
+  <div
+    class="flex justify-start bg-white"
+    style="border-top-left-radius: 5px; width: fit-content"
+  >
+    <button
+      id="button1"
+      class="bg-[#002855] text-white p-2 rounded mr-2 w-[90px] md:w-[142px]"
+      onclick="showTable('table1')"
+      style="height: 43px; border-top-left-radius: 5px"
+    >
+      Activity
+    </button>
+    <button
+      id="button2"
+      class="bg-white text-[#002855] border border-[#002855] p-2 rounded w-[90px] md:w-[142px]"
+      onclick="showTable('table2')"
+      style="height: 43px"
+    >
+      Prospects
+    </button>
+  </div>
+  <!-- Tables -->
+  <div
+    class="bg-white p-2 md:p-6 shadow w-full md:w-full lg:w-full"
+    style="border-radius: 0px 5px 5px 5px"
+  >
+    <!-- Table 1 -->
+    <div
+      id="table1"
+      class="overflow-x-auto"
+      style="height: 370px; font-size: 12px"
+    >
+      <ul class="w-full">
+        <li
+          class="hidden md:flex md:flex-row text-center justify-center font-semibold"
+        >
+          <div class="w-full md:w-[5%] p-2"></div>
+          <div class="w-full md:w-[15%] p-2">Name</div>
+          <div class="w-full md:w-[15%] p-2">Email</div>
+          <div class="w-full md:w-[15%] p-2">Phone Number</div>
+          <div class="w-full md:w-[15%] p-2">Product Interest</div>
+          <div class="w-full md:w-[10%] p-2">Assigned To</div>
+          <div class="w-full md:w-[15%] p-2">Date Added</div>
+          <div class="w-full md:w-[5%] p-2">Status</div>
+          <div class="w-full md:w-[5%] p-2">Action</div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+            style="display: flex; align-items: center"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[15%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[15%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[15%] p-2">07033253454</div>
+          <div class="w-full md:w-[15%] p-2">Auto Insurance</div>
+          <div class="w-full md:w-[10%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[15%] p-2">01 Jan 2023</div>
+          <div
+            class="w-[20%] mx-[auto] my-[0] md:my-[10px] md:w-[5%] py-0 h-[18px] text-white"
+            style="
+              background-color: #ffb946;
+              border-radius: 5px;
+              margin-top: 10px;
+            "
+          >
+            Ongoing
+          </div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+            style="display: flex; align-items: center"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[15%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[15%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[15%] p-2">07033253454</div>
+          <div class="w-full md:w-[15%] p-2">Auto Insurance</div>
+          <div class="w-full md:w-[10%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[15%] p-2">01 Jan 2023</div>
+          <div
+            class="w-[20%] mx-[auto] my-[0] md:my-[10px] md:w-[5%] py-0 h-[18px] text-white"
+            style="
+              background-color: #00b388;
+              border-radius: 5px;
+              margin-top: 10px;
+            "
+          >
+            Closed
+          </div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+            style="display: flex; align-items: center"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[15%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[15%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[15%] p-2">07033253454</div>
+          <div class="w-full md:w-[15%] p-2">Auto Insurance</div>
+          <div class="w-full md:w-[10%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[15%] p-2">01 Jan 2023</div>
+          <div
+            class="w-[20%] mx-[auto] my-[0] md:my-[10px] md:w-[5%] py-0 h-[18px] text-white"
+            style="
+              background-color: #e30000;
+              border-radius: 5px;
+              margin-top: 10px;
+            "
+          >
+            Out of SLA
+          </div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+            style="display: flex; align-items: center"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[15%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[15%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[15%] p-2">07033253454</div>
+          <div class="w-full md:w-[15%] p-2">Auto Insurance</div>
+          <div class="w-full md:w-[10%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[15%] p-2">01 Jan 2023</div>
+          <div
+            class="w-[20%] mx-[auto] my-[0] md:my-[10px] md:w-[5%] py-0 h-[18px] text-white"
+            style="
+              background-color: #0277e6;
+              border-radius: 5px;
+              margin-top: 10px;
+            "
+          >
+            Open
+          </div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Table 2 -->
+    <div
+      id="table2"
+      class="hidden overflow-x-auto"
+      style="height: 370px; font-size: 12px"
+    >
+      <ul class="w-full">
+        <li
+          class="hidden md:flex md:flex-row justify-center text-center p-2 font-semibold"
+        >
+          <div class="w-full md:w-[5%] p-2"></div>
+          <div class="w-full md:w-[16%] p-2">Name</div>
+          <div class="w-full md:w-[20%] p-2">Email</div>
+          <div class="w-full md:w-[17%] p-2">Phone Number</div>
+          <div class="w-full md:w-[10%] p-2">Branch</div>
+          <div class="w-full md:w-[10%] p-2">Prospect</div>
+          <div class="w-full md:w-[17%] p-2">Date Added</div>
+          <div class="w-full md:w-[5%] p-2">Action</div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Jane Doe</div>
+          <div class="w-full md:w-[20%] p-2">janedoe@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">08012345678</div>
+          <div class="w-full md:w-[10%] p-2">Abuja Branch</div>
+          <div class="w-full md:w-[10%] p-2">08</div>
+          <div class="w-full md:w-[17%] p-2">05 Feb 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Jane Doe</div>
+          <div class="w-full md:w-[20%] p-2">janedoe@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">08012345678</div>
+          <div class="w-full md:w-[10%] p-2">Abuja Branch</div>
+          <div class="w-full md:w-[10%] p-2">08</div>
+          <div class="w-full md:w-[17%] p-2">05 Feb 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Jane Doe</div>
+          <div class="w-full md:w-[20%] p-2">janedoe@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">08012345678</div>
+          <div class="w-full md:w-[10%] p-2">Abuja Branch</div>
+          <div class="w-full md:w-[10%] p-2">08</div>
+          <div class="w-full md:w-[17%] p-2">05 Feb 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

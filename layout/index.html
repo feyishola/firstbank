@@ -10,6 +10,7 @@
     <script src="../scripts/layouts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../styles/variables.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -23,6 +24,67 @@
       body {
         font-family: "Circular Std Medium", sans-serif;
       }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      .full-height {
+        height: 100vh;
+      }
+      .whole {
+        color: #7a7c87;
+        font-family: "Mulish", sans-serif;
+      }
+      .dynamic-button.active {
+        background-color: #f1f1f1;
+      }
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        width: 125px;
+        z-index: 1000;
+        cursor: pointer;
+      }
+      .dropdown p {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        color: #333;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .dropdown p:last-child {
+        border-bottom: none;
+      }
+      .dropdown p:hover {
+        background-color: #f0f0f0;
+      }
+
+      .action-menu {
+        display: none;
+        border-radius: 4px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        cursor: pointer;
+        height: 86px;
+        text-align: left;
+        padding-left: 5px;
+        padding-top: 5px;
+        line-height: 1.5rem;
+      }
     </style>
   </head>
 
@@ -31,7 +93,7 @@
     <div class="flex w-screen h-screen bg-blue-500">
       <!-- sidebar layout container -->
       <aside
-        class="hidden lg:flex flex-col gap-20 w-[260px] bg-[#002855] h-screen justify-start pt-8"
+        class="hidden lg:flex flex-col gap-20 w-[260px] bg-[var(--secondary-color)] h-screen justify-start pt-8"
       >
         <!-- first bank logo container -->
         <a href="/layout" class="pl-8">
@@ -46,21 +108,6 @@
         <ul class="flex flex-col">
           <li class="nav-item bg-[#E6B014] border-l-[3px] pl-8 py-3">
             <!-- dashboard link -->
-
-            <!-- <a
-              class="flex gap-[10px] items-center text-white text-[14px] nav-link"
-              href="#dashboard"
-              data-url="/pages/dashboard.html"
-            >
-              <img
-                src="../assets/general/dashboardIcon.svg"
-                alt="dashboard icon"
-                width="18px"
-                height="auto"
-                class="nav-item-image mulish-font"
-              />
-              Dashboard
-            </a> -->
             <button
               class="flex gap-[10px] items-center text-white text-[14px] nav-link circularSTD-font"
               onclick="loadPage('../pages/dashboard.html', this)"
@@ -77,21 +124,6 @@
           </li>
 
           <li class="nav-item pl-8 py-3">
-            <!-- prospects link -->
-            <!-- <a
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#prospects"
-              data-url="/pages/prospects.html"
-            >
-              <img
-                src="../assets/general/prospectsIcon.svg"
-                alt="prospects icon"
-                width="18.2px"
-                height="18.2px"
-                class="nav-item-image"
-              />
-              Prospects
-            </a> -->
             <button
               class="flex items-center gap-[10px] text-white text-[14px] nav-link"
               onclick="loadPage('../pages/prospects.html', this)"
@@ -106,26 +138,42 @@
               Prospects
             </button>
           </li>
+          <li class="nav-item pl-8 py-3">
+            <button
+              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
+              onclick="loadPage('../pages/userprofile2.html', this)"
+            >
+              <img
+                src="../assets/general/prospectsIcon.svg"
+                alt="prospects icon"
+                width="18.2px"
+                height="18.2px"
+                class="nav-item-image"
+              />
+              Users
+            </button>
+          </li>
+          <li class="nav-item pl-8 py-3">
+            <button
+              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
+              onclick="loadPage('../pages/branch.html', this)"
+            >
+              <img
+                src="../assets/general/prospectsIcon.svg"
+                alt="prospects icon"
+                width="18.2px"
+                height="18.2px"
+                class="nav-item-image"
+              />
+              Branch
+            </button>
+          </li>
 
           <li class="nav-item pl-8 py-3">
             <!-- reports link -->
-            <!-- <button
-              class="flex items-center gap-[14px] text-white text-[14px] nav-link"
-              href="#reports"
-              data-url="/pages/reports.html"
-            >
-              <img
-                src="../assets/general/reportsIcon.svg"
-                alt="reports icon"
-                width="14px"
-                height="auto"
-                class="nav-item-image"
-              />
-              Reports
-            </button> -->
             <button
               class="flex items-center gap-[14px] text-white text-[14px] nav-link"
-              onclick="loadPage('../pages/reports.html', this)"
+              onclick="loadPage('../pages/branchprofile.html', this)"
             >
               <img
                 src="../assets/general/reportsIcon.svg"
@@ -139,24 +187,9 @@
           </li>
 
           <li class="nav-item pl-8 py-3">
-            <!-- settings link -->
-            <!-- <button
-              class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              href="#settings"
-              data-url="/pages/settings.html"
-            >
-              <img
-                src="../assets/general/settingsIcon.svg"
-                alt="settings icon"
-                width="18.2px"
-                height="18.2px"
-                class="nav-item-image"
-              />
-              Settings
-            </button> -->
             <button
               class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              onclick="loadPage('../pages/settings.html', this)"
+              onclick="loadPage('../pages/admin.html', this)"
             >
               <img
                 src="../assets/general/settingsIcon.svg"
@@ -165,7 +198,7 @@
                 height="18.2px"
                 class="nav-item-image"
               />
-              Settings
+              Admin
             </button>
           </li>
         </ul>
@@ -243,10 +276,16 @@
         <!-- RIGHT MAIN CONTENT AREA -->
         <main
           id="content"
-          class="pl-6 pr-6 sm:pl-8 sm:pr-8 pt-6 flex-grow mb-10"
+          class="flex-1 p-6 custom-scrollbar overflow-y-auto"
         ></main>
       </section>
     </div>
+
+    <!-- Importing Material Icons for icons used in the sidebar -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
     <script src="../scripts/dashboard.js"></script>
   </body>
