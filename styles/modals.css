@@ -16,7 +16,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   max-width: 90%;
-  width: 100%;
+  /* width: 100%; */
   max-height: 90vh;
   padding: 20px;
   text-align: center;
@@ -26,7 +26,7 @@ body {
 /* For small screens (mobile) */
 @media (max-width: 640px) {
   .modal {
-    width: 90%;
+    width: 50%;
     height: auto;
     padding: 15px;
   }
@@ -35,7 +35,7 @@ body {
 /* For medium screens (tablets) */
 @media (min-width: 641px) and (max-width: 1024px) {
   .modal {
-    width: 80%;
+    width: 60%;
     height: auto;
     padding: 20px;
   }
@@ -44,8 +44,8 @@ body {
 /* For large screens (desktops) */
 @media (min-width: 1025px) {
   .modal {
-    width: 646.09px;
-    height: 506px;
+    /* width: 646.09px; */
+    height: auto;
     padding: 20px;
   }
 }
