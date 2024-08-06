@@ -1,0 +1,30 @@
+<div>create prospects form</div>
+
+<!-- modal -->
+<div
+  id="modal"
+  class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center"
+>
+  <div class="modal">
+    <h1 class="prospect">Prospect created successfully</h1>
+
+    <div class="icon">
+      <img src="/assets/checked.svg" />
+    </div>
+    <button onclick="loadPage('/pages/prospects.html',this)">Close</button>
+  </div>
+</div>
+
+<!-- prospects form here -->
+<button
+  style="
+    width: 196px;
+    height: 56px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+  "
+  onclick="showModal()"
+>
+  Create Prospect
+</button>

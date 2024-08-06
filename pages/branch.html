@@ -10,6 +10,7 @@
         class="w-[100px] md:w-[169px]"
         height="45px"
         style="margin-bottom: 16px; cursor: pointer"
+        onclick="loadPage('/pages/createbranch.html',this)"
       />
     </div>
   </div>
@@ -161,7 +162,12 @@
             class="action-menu absolute bg-white w-[111px] text-[12px]"
             style="right: 0; bottom: -50px; display: none"
           >
-            <p>View</p>
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/branchprofile.html',this)"
+            >
+              View
+            </p>
             <p>Edit</p>
             <p class="text-[#EE5331]">Suspend</p>
           </div>

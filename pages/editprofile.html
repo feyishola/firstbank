@@ -1,0 +1,30 @@
+<div>Update user form</div>
+
+<!-- modal -->
+<div
+  id="modal"
+  class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center"
+>
+  <div class="modal">
+    <h1 class="profile">Profile updated successfully</h1>
+
+    <div class="icon">
+      <img src="/assets/checked.svg" />
+    </div>
+    <button onclick="loadPage('/pages/users.html',this)">Close</button>
+  </div>
+</div>
+
+<!-- Update user form -->
+<button
+  style="
+    width: 196px;
+    height: 56px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+  "
+  onclick="showModal()"
+>
+  Update Profile
+</button>

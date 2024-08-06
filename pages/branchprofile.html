@@ -5,11 +5,12 @@
     <div class="w-full flex flex-row justify-between">
       <h1 class="text-[#34475E] text-xl mb-[34px]">Branch Profile</h1>
       <img
-        src="/assets/Back Button.svg"
+        src="/assets/Back Button branch.svg"
         alt="back button"
         width="128px"
         height="24px"
         style="margin-bottom: 16px; cursor: pointer"
+        onclick="loadPage('/pages/branch.html')"
       />
     </div>
   </div>
@@ -105,6 +106,8 @@
         </button>
         <button
           class="bg-[#C61531] text-white p-2 rounded w-[90px] md:w-[168px] md:h-[45px]"
+          id="statusbtn"
+          onclick="toggleStatus()"
         >
           Suspend
         </button>
@@ -192,7 +195,12 @@
             class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
             style="right: 0; bottom: -50px; display: none"
           >
-            <p>View</p>
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/userprofile2.html',this)"
+            >
+              View
+            </p>
             <p>Edit</p>
             <p class="text-[#EE5331]">Suspend</p>
           </div>
@@ -229,7 +237,12 @@
             class="action-menu absolute bg-white w-[111px] text-[12px]"
             style="right: 0; bottom: -50px; display: none"
           >
-            <p>View</p>
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/userprofile2.html',this)"
+            >
+              View
+            </p>
             <p>Edit</p>
             <p class="text-[#EE5331]">Suspend</p>
           </div>
@@ -266,7 +279,12 @@
             class="action-menu absolute bg-white w-[111px] text-[12px]"
             style="right: 0; bottom: -50px; display: none"
           >
-            <p>View</p>
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/userprofile2.html',this)"
+            >
+              View
+            </p>
             <p>Edit</p>
             <p class="text-[#EE5331]">Suspend</p>
           </div>
@@ -303,7 +321,12 @@
             class="action-menu absolute bg-white w-[111px] text-[12px]"
             style="right: 0; bottom: -50px; display: none"
           >
-            <p>View</p>
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/userprofile2.html',this)"
+            >
+              View
+            </p>
             <p>Edit</p>
             <p class="text-[#EE5331]">Suspend</p>
           </div>
@@ -340,7 +363,12 @@
             class="action-menu absolute bg-white w-[111px] text-[12px]"
             style="right: 0; bottom: -50px; display: none"
           >
-            <p>View</p>
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/userprofile2.html',this)"
+            >
+              View
+            </p>
             <p>Edit</p>
             <p class="text-[#EE5331]">Suspend</p>
           </div>
@@ -398,7 +426,12 @@
             class="action-menu absolute bg-white w-[111px] text-[12px]"
             style="right: 0; bottom: -50px; display: none"
           >
-            <p>View</p>
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/prospectschat.html',this)"
+            >
+              View
+            </p>
             <p>Edit</p>
             <p class="text-[#EE5331]">Suspend</p>
           </div>
@@ -435,7 +468,12 @@
             class="action-menu absolute bg-white w-[111px] text-[12px]"
             style="right: 0; bottom: -50px; display: none"
           >
-            <p>View</p>
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/prospectschat.html',this)"
+            >
+              View
+            </p>
             <p>Edit</p>
             <p class="text-[#EE5331]">Suspend</p>
           </div>
@@ -472,7 +510,12 @@
             class="action-menu absolute bg-white w-[111px] text-[12px]"
             style="right: 0; bottom: -50px; display: none"
           >
-            <p>View</p>
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/prospectschat.html',this)"
+            >
+              View
+            </p>
             <p>Edit</p>
             <p class="text-[#EE5331]">Suspend</p>
           </div>

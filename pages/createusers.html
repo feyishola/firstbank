@@ -1,0 +1,30 @@
+<div>create users form</div>
+
+<!-- modal -->
+<div
+  id="modal"
+  class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center"
+>
+  <div class="modal">
+    <h1 class="success">User has been created successfully</h1>
+    <p>An email has been to sent John to complete his account setup.</p>
+    <div class="icon">
+      <img src="/assets/checked.svg" />
+    </div>
+    <button onclick="loadPage('/pages/users.html',this)">Close</button>
+  </div>
+</div>
+
+<!-- users form here -->
+<button
+  style="
+    width: 196px;
+    height: 56px;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+  "
+  onclick="showModal()"
+>
+  Create User
+</button>

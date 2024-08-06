@@ -5,103 +5,70 @@
     <div class="w-full flex flex-row justify-between">
       <h1 class="text-[#34475E] text-xl mb-[34px]">Prospects</h1>
       <img
-        src="/assets/Back prospect.svg"
-        alt="back button"
-        width="128px"
-        height="24px"
+        src="/assets/cr-prospects.svg"
+        alt="button"
+        class="w-[100px] md:w-[169px]"
+        height="45px"
         style="margin-bottom: 16px; cursor: pointer"
+        onclick="loadPage('/pages/createprospects.html')"
       />
     </div>
   </div>
 
   <!-- Top div -->
   <div
-    class="relative flex flex-col gap-4 mb-10 md:gap-0 lg:gap-0 md:flex-row lg:flex-row items-center justify-center md:items-center md:justify-around lg:items-center lg:justify-around w-full px-1 md:px-8 py-4 border rounded-md border-[#D8D8D8] bg-[#FFFFFF]"
-    style="padding-right: 16px; padding-left: 16px"
+    class="flex flex-col gap-4 mb-10 md:gap-0 lg:gap-0 md:flex-row lg:flex-row items-center justify-center md:items-center md:justify-around lg:items-center lg:justify-around w-full pl-0 md:pl-[11px] pr-0 md:pr-[35px] py-4 border rounded-md border-[#D8D8D8] bg-[#FFFFFF] h-[159px]"
   >
-    <!-- btn -->
-    <div class="absolute right-[40px] top-[20px]" style="display: inline">
-      <img
-        src="/assets/Group 1856.svg"
-        alt="top-btn"
-        width="23px"
-        height="23px"
-        style="cursor: pointer"
-      />
-    </div>
-
     <div
-      class="flex flex-col items-center gap-2 w-1/4 md:border-r md:border-gray-300"
+      class="w-full border rounded-md border-[#D8D8D8] bg-[#FFFFFF] p-0"
+      style="
+        height: 118px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
     >
-      <img
-        src="../assets/Ellipse 47.svg"
-        width="170px"
-        height="170px"
-        alt="prospects"
-      />
-      <p>Nurudeen Ibrahim</p>
-    </div>
-
-    <div class="flex flex-col gap-5 ml-0 md:ml-5 w-full md:w-3/4 px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- Grid Item 1 -->
-        <div class="flex flex-col">
-          <p class="text-[#A3A3A3] text-xs">Name</p>
-          <p class="text-[#585858] font-normal text-sm">Nurudeen Ibrahim</p>
-        </div>
-        <!-- Grid Item 2 -->
-        <div class="flex flex-col">
-          <p class="text-[#A3A3A3] text-xs">Manager</p>
-          <p class="text-[#585858] font-normal text-sm">Seyi Olanrewaju</p>
-        </div>
-        <!-- Grid Item 3 -->
-        <div class="flex flex-col">
-          <p class="text-[#A3A3A3] text-xs">Prospects</p>
-          <p class="text-[#585858] font-normal text-sm">5</p>
-        </div>
-        <!-- Grid Item 4 -->
-        <div class="flex flex-col">
-          <p class="text-[#A3A3A3] text-xs">Date Created</p>
-          <p class="text-[#585858] font-normal text-sm">04 Jan 2023</p>
-        </div>
-
-        <!-- Horizontal line -->
+      <div
+        class="w-[100%] md:w-[95%] rounded-md bg-[#FFFFFF] flex flex-col md:flex-row gap-5"
+      >
         <div
-          class="col-span-1 md:col-span-2 lg:col-span-4 border-b border-gray-300"
-        ></div>
-
-        <!-- Grid Item 5 -->
-        <div class="flex flex-col">
-          <p class="text-[#A3A3A3] text-xs">Phone Number</p>
-          <p class="text-[#585858] font-normal text-sm">0703345456</p>
-        </div>
-        <!-- Grid Item 6 -->
-        <div class="flex flex-col">
-          <p class="text-[#A3A3A3] text-xs">Email address</p>
-          <p class="text-[#585858] font-normal text-sm">thedeen@gmail.com</p>
-        </div>
-        <!-- Grid Item 7 -->
-        <div class="flex flex-col">
-          <p class="text-[#A3A3A3] text-xs">Branch</p>
-          <p class="text-[#585858] font-normal text-sm">Lagos Branch</p>
-        </div>
-        <!-- Grid Item 8 -->
-        <div class="flex flex-col">
-          <p class="text-[#A3A3A3] text-xs">Status</p>
-          <p class="text-[#FFCD28] font-normal text-sm">Ongoing</p>
-        </div>
-
-        <!-- Horizontal line -->
-        <div
-          class="col-span-1 md:col-span-2 lg:col-span-4 border-b border-gray-300"
-        ></div>
-      </div>
-      <div class="flex justify-center md:justify-between gap-1 mt-4">
-        <button
-          class="bg-white text-[#002855] p-2 rounded w-full md:w-[168px] md:h-[45px] border border-[var(--secondary-color)]"
+          class="w-full md:w-[85%] h-[45px] border rounded-md border-[#D8D8D8] flex"
         >
-          Start a Chat
-        </button>
+          <div
+            class="bg-[#F3F5F6] w-1/4 flex flex-col justify-around items-center md:flex-row"
+          >
+            <span class="hidden lg:inline">Search By:</span>
+            <select class="w-full sm:w-auto" style="outline: none">
+              <option>Name</option>
+              <option>Email</option>
+              <option>Address</option>
+            </select>
+          </div>
+          <div class="w-3/4 flex">
+            <svg
+              class="w-[15px] h-[16px] mx-[10px] my-[auto] text-gray-500"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.71 20.29l-5.4-5.4A7.92 7.92 0 0 0 18 10a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.89-1.69l5.4 5.4a1 1 0 0 0 1.42-1.42zM10 16a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"
+              ></path>
+            </svg>
+            <input type="search" class="w-[90%]" style="outline: none" />
+          </div>
+        </div>
+        <div class="w-full md:w-[15%] h-[45px] border rounded-md">
+          <button
+            style="
+              background-color: var(--secondary-color);
+              color: white;
+              width: 100%;
+              height: 100%;
+            "
+          >
+            Find
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -110,24 +77,32 @@
 
   <!-- toggle buttons -->
   <div
-    class="flex justify-start bg-white"
+    class="flex justify-start bg-white flex-col md:flex-row"
     style="border-top-left-radius: 5px; width: fit-content"
   >
     <button
       id="button1"
-      class="bg-[#002855] text-white p-2 rounded mr-2 w-[90px] md:w-[142px]"
-      onclick="showTable('table1')"
+      class="bg-white text-[#002855] p-2 rounded w-[90px] md:w-[142px]"
+      onclick="showTable2('table1')"
       style="height: 43px; border-top-left-radius: 5px"
     >
-      Activity
+      All
     </button>
     <button
       id="button2"
-      class="bg-white text-[#002855] border border-[#002855] p-2 rounded w-[90px] md:w-[142px]"
-      onclick="showTable('table2')"
+      class="bg-[#002855] text-white p-2 rounded w-[90px] md:w-[142px]"
+      onclick="showTable2('table2')"
       style="height: 43px"
     >
-      Chats
+      Active
+    </button>
+    <button
+      id="button3"
+      class="bg-[#C61531] text-white p-2 rounded w-[90px] md:w-[142px]"
+      onclick="showTable2('table3')"
+      style="height: 43px"
+    >
+      Suspended
     </button>
   </div>
   <!-- Tables -->
@@ -143,254 +118,360 @@
     >
       <ul class="w-full">
         <li
-          class="md:flex md:flex-row text-center justify-center font-semibold"
+          class="hidden md:flex md:flex-row justify-center text-center p-2 font-semibold"
         >
-          <div class="p-2 flex flex-start ml-[44px]" style="text-align: left">
-            <p>Activity Summary Today</p>
+          <div class="w-full md:w-[5%] p-2"></div>
+          <div class="w-full md:w-[16%] p-2">Name</div>
+          <div class="w-full md:w-[20%] p-2">Email</div>
+          <div class="w-full md:w-[17%] p-2">Phone Number</div>
+          <div class="w-full md:w-[10%] p-2">Branch</div>
+          <div class="w-full md:w-[10%] p-2">Prospect</div>
+          <div class="w-full md:w-[17%] p-2">Date Added</div>
+          <div class="w-full md:w-[5%] p-2">Action</div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[20%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">07033253454</div>
+          <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
+          <div class="w-full md:w-[10%] p-2">05</div>
+          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/prospectschat.html',this)"
+            >
+              View
+            </p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
           </div>
         </li>
         <li
           class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
         >
-          <div class="w-full p-2 flex justify-between flex-col md:flex-row">
-            <span
-              ><span
-                ><img
-                  src="/assets/circle.svg"
-                  alt="list"
-                  width="12px"
-                  height="12px"
-                  class="hidden mr-[18px] ml-[36px] md:inline-flex"
-              /></span>
-              Seyi Olanrewaju scheduled a meeting with the prospects</span
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[20%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">07033253454</div>
+          <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
+          <div class="w-full md:w-[10%] p-2">05</div>
+          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/prospectschat.html',this)"
             >
-            <span>9:35 am</span>
+              View
+            </p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
           </div>
         </li>
         <li
           class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
         >
-          <div class="w-full p-2 flex justify-between flex-col md:flex-row">
-            <span
-              ><span
-                ><img
-                  src="/assets/circle.svg"
-                  alt="list"
-                  width="12px"
-                  height="12px"
-                  class="hidden mr-[18px] ml-[36px] md:inline-flex"
-              /></span>
-              Seyi Olanrewaju scheduled a meeting with the prospects</span
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[20%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">07033253454</div>
+          <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
+          <div class="w-full md:w-[10%] p-2">05</div>
+          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/prospectschat.html',this)"
             >
-            <span>9:35 am</span>
+              View
+            </p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
           </div>
         </li>
         <li
           class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
         >
-          <div class="w-full p-2 flex justify-between flex-col md:flex-row">
-            <span
-              ><span
-                ><img
-                  src="/assets/circle.svg"
-                  alt="list"
-                  width="12px"
-                  height="12px"
-                  class="hidden mr-[18px] ml-[36px] md:inline-flex"
-              /></span>
-              Seyi Olanrewaju scheduled a meeting with the prospects</span
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[20%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">07033253454</div>
+          <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
+          <div class="w-full md:w-[10%] p-2">05</div>
+          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/prospectschat.html',this)"
             >
-            <span>9:35 am</span>
+              View
+            </p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
           </div>
         </li>
         <li
           class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
         >
-          <div class="w-full p-2 flex justify-between flex-col md:flex-row">
-            <span
-              ><span
-                ><img
-                  src="/assets/circle.svg"
-                  alt="list"
-                  width="12px"
-                  height="12px"
-                  class="hidden mr-[18px] ml-[36px] md:inline-flex"
-              /></span>
-              Seyi Olanrewaju scheduled a meeting with the prospects</span
-            >
-            <span>9:35 am</span>
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
           </div>
-        </li>
-        <li
-          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
-        >
-          <div class="w-full p-2 flex justify-between flex-col md:flex-row">
-            <span
-              ><span
-                ><img
-                  src="/assets/circle.svg"
-                  alt="list"
-                  width="12px"
-                  height="12px"
-                  class="hidden mr-[18px] ml-[36px] md:inline-flex"
-              /></span>
-              Seyi Olanrewaju scheduled a meeting with the prospects</span
-            >
-            <span>9:35 am</span>
+          <div class="w-full md:w-[16%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[20%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">07033253454</div>
+          <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
+          <div class="w-full md:w-[10%] p-2">05</div>
+          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
           </div>
-        </li>
-        <li
-          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
-        >
-          <div class="w-full p-2 flex justify-between flex-col md:flex-row">
-            <span
-              ><span
-                ><img
-                  src="/assets/circle.svg"
-                  alt="list"
-                  width="12px"
-                  height="12px"
-                  class="hidden mr-[18px] ml-[36px] md:inline-flex"
-              /></span>
-              Seyi Olanrewaju scheduled a meeting with the prospects</span
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/prospectschat.html',this)"
             >
-            <span>9:35 am</span>
+              View
+            </p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
           </div>
         </li>
       </ul>
     </div>
-    <!-- Table 2 chats -->
+    <!-- Table 2 -->
     <div
       id="table2"
-      class="hidden overflow-x-auto custom-scrollbar"
+      class="hidden overflow-x-auto"
       style="height: 370px; font-size: 12px"
     >
-      <!-- chat room -->
-
-      <!-- sender -->
-      <div class="mt-[21px] flex flex-row flex-start reciever">
-        <div style="gap: 10px; margin-right: auto; display: flex">
-          <img
-            src="/assets/Ellipse 47.svg"
-            width="57px"
-            height="57px"
-            style="display: inline"
-          />
+      <ul class="w-full">
+        <li
+          class="hidden md:flex md:flex-row justify-center text-center p-2 font-semibold"
+        >
+          <div class="w-full md:w-[5%] p-2"></div>
+          <div class="w-full md:w-[16%] p-2">Name</div>
+          <div class="w-full md:w-[20%] p-2">Email</div>
+          <div class="w-full md:w-[17%] p-2">Phone Number</div>
+          <div class="w-full md:w-[10%] p-2">Branch</div>
+          <div class="w-full md:w-[10%] p-2">Prospect</div>
+          <div class="w-full md:w-[17%] p-2">Date Added</div>
+          <div class="w-full md:w-[5%] p-2">Action</div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
           <div
-            class="w-[304px] h-[68px] bg-[#F3F5F6]"
-            style="
-              border-radius: 16px 16px 16px 0px;
-              padding: 16px 24px;
-              display: inline;
-            "
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
           >
-            <p style="text-align: left">
-              Let’s schedule a meeting with the prospect.
-            </p>
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
           </div>
-        </div>
-        <div></div>
-      </div>
-
-      <!-- receiver -->
-      <div class="mt-[21px] flex flex-row flex-end reciever">
-        <div></div>
-        <div style="gap: 10px; margin-left: auto; display: flex">
+          <div class="w-full md:w-[16%] p-2">Jane Doe</div>
+          <div class="w-full md:w-[20%] p-2">janedoe@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">08012345678</div>
+          <div class="w-full md:w-[10%] p-2">Abuja Branch</div>
+          <div class="w-full md:w-[10%] p-2">08</div>
+          <div class="w-full md:w-[17%] p-2">05 Feb 2023</div>
           <div
-            class="w-[304px] h-[68px] bg-[#D7F8F4]"
-            style="
-              border-radius: 16px 16px 0px 16px;
-              padding: 16px 24px;
-              display: inline;
-            "
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
           >
-            <p style="text-align: right">
-              Let’s schedule a meeting with the prospect.
-            </p>
+            ...
           </div>
-          <img
-            src="/assets/Rectangle 819.svg"
-            width="57px"
-            height="57px"
-            style="display: inline"
-          />
-        </div>
-      </div>
-
-      <!-- sender -->
-      <div class="mt-[21px] flex flex-row flex-start reciever">
-        <div style="gap: 10px; margin-right: auto; display: flex">
-          <img
-            src="/assets/Ellipse 47.svg"
-            width="57px"
-            height="57px"
-            style="display: inline"
-          />
+          <!-- dropdown -->
           <div
-            class="w-[304px] h-[68px] bg-[#F3F5F6]"
-            style="
-              border-radius: 16px 16px 16px 0px;
-              padding: 16px 24px;
-              display: inline;
-            "
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px]"
+            style="right: 0; bottom: -50px; display: none"
           >
-            <p style="text-align: left">
-              Let’s schedule a meeting with the prospect.
-            </p>
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
           </div>
-        </div>
-        <div></div>
-      </div>
-
-      <!-- sender -->
-      <div class="mt-[21px] flex flex-row flex-start reciever">
-        <div style="gap: 10px; margin-right: auto; display: flex">
-          <img
-            src="/assets/Ellipse 47.svg"
-            width="57px"
-            height="57px"
-            style="display: inline"
-          />
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
           <div
-            class="w-[304px] h-[68px] bg-[#F3F5F6]"
-            style="
-              border-radius: 16px 16px 16px 0px;
-              padding: 16px 24px;
-              display: inline;
-            "
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
           >
-            <p style="text-align: left">
-              Let’s schedule a meeting with the prospect.
-            </p>
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
           </div>
-        </div>
-        <div></div>
-      </div>
-
-      <!-- receiver -->
-      <div class="mt-[21px] flex flex-row flex-end reciever">
-        <div></div>
-        <div style="gap: 10px; margin-left: auto; display: flex">
+          <div class="w-full md:w-[16%] p-2">Jane Doe</div>
+          <div class="w-full md:w-[20%] p-2">janedoe@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">08012345678</div>
+          <div class="w-full md:w-[10%] p-2">Abuja Branch</div>
+          <div class="w-full md:w-[10%] p-2">08</div>
+          <div class="w-full md:w-[17%] p-2">05 Feb 2023</div>
           <div
-            class="w-[304px] h-[68px] bg-[#D7F8F4]"
-            style="
-              border-radius: 16px 16px 0px 16px;
-              padding: 16px 24px;
-              display: inline;
-            "
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
           >
-            <p style="text-align: right">
-              Let’s schedule a meeting with the prospect.
-            </p>
+            ...
           </div>
-          <img
-            src="/assets/Rectangle 819.svg"
-            width="57px"
-            height="57px"
-            style="display: inline"
-          />
-        </div>
-      </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Jane Doe</div>
+          <div class="w-full md:w-[20%] p-2">janedoe@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">08012345678</div>
+          <div class="w-full md:w-[10%] p-2">Abuja Branch</div>
+          <div class="w-full md:w-[10%] p-2">08</div>
+          <div class="w-full md:w-[17%] p-2">05 Feb 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

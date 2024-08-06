@@ -1,1 +1,477 @@
-<p>This is the users page</p>
+<div class="flex flex-col p-10 overflow-auto">
+  <div
+    class="w-full flex flex-col items-start justify-center gap-5 lg:items-center lg:justify-between lg:flex-row"
+  >
+    <div class="w-full flex flex-row justify-between">
+      <h1 class="text-[#34475E] text-xl mb-[34px]">Users</h1>
+      <img
+        src="/assets/cr-users.svg"
+        alt="button"
+        class="w-[100px] md:w-[169px]"
+        height="45px"
+        style="margin-bottom: 16px; cursor: pointer"
+        onclick="loadPage('/pages/createusers.html')"
+      />
+    </div>
+  </div>
+
+  <!-- Top div -->
+  <div
+    class="flex flex-col gap-4 mb-10 md:gap-0 lg:gap-0 md:flex-row lg:flex-row items-center justify-center md:items-center md:justify-around lg:items-center lg:justify-around w-full pl-0 md:pl-[11px] pr-0 md:pr-[35px] py-4 border rounded-md border-[#D8D8D8] bg-[#FFFFFF] h-[159px]"
+  >
+    <div
+      class="w-full border rounded-md border-[#D8D8D8] bg-[#FFFFFF] p-0"
+      style="
+        height: 118px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        class="w-[100%] md:w-[95%] rounded-md bg-[#FFFFFF] flex flex-col md:flex-row gap-5"
+      >
+        <div
+          class="w-full md:w-[85%] h-[45px] border rounded-md border-[#D8D8D8] flex"
+        >
+          <div
+            class="bg-[#F3F5F6] w-1/4 flex flex-col justify-around items-center md:flex-row"
+          >
+            <span class="hidden lg:inline">Search By:</span>
+            <select class="w-full sm:w-auto" style="outline: none">
+              <option>Name</option>
+              <option>Email</option>
+              <option>Address</option>
+            </select>
+          </div>
+          <div class="w-3/4 flex">
+            <svg
+              class="w-[15px] h-[16px] mx-[10px] my-[auto] text-gray-500"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.71 20.29l-5.4-5.4A7.92 7.92 0 0 0 18 10a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.89-1.69l5.4 5.4a1 1 0 0 0 1.42-1.42zM10 16a6 6 0 1 1 6-6 6 6 0 0 1-6 6z"
+              ></path>
+            </svg>
+            <input type="search" class="w-[90%]" style="outline: none" />
+          </div>
+        </div>
+        <div class="w-full md:w-[15%] h-[45px] border rounded-md">
+          <button
+            style="
+              background-color: var(--secondary-color);
+              color: white;
+              width: 100%;
+              height: 100%;
+            "
+          >
+            Find
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom div -->
+
+  <!-- toggle buttons -->
+  <div
+    class="flex justify-start bg-white flex-col md:flex-row"
+    style="border-top-left-radius: 5px; width: fit-content"
+  >
+    <button
+      id="button1"
+      class="bg-white text-[#002855] p-2 rounded w-[90px] md:w-[142px]"
+      onclick="showTable2('table1')"
+      style="height: 43px; border-top-left-radius: 5px"
+    >
+      All
+    </button>
+    <button
+      id="button2"
+      class="bg-[#002855] text-white p-2 rounded w-[90px] md:w-[142px]"
+      onclick="showTable2('table2')"
+      style="height: 43px"
+    >
+      Active
+    </button>
+    <button
+      id="button3"
+      class="bg-[#C61531] text-white p-2 rounded w-[90px] md:w-[142px]"
+      onclick="showTable2('table3')"
+      style="height: 43px"
+    >
+      Suspended
+    </button>
+  </div>
+  <!-- Tables -->
+  <div
+    class="bg-white p-2 md:p-6 shadow w-full md:w-full lg:w-full"
+    style="border-radius: 0px 5px 5px 5px"
+  >
+    <!-- Table 1 -->
+    <div
+      id="table1"
+      class="overflow-x-auto"
+      style="height: 370px; font-size: 12px"
+    >
+      <ul class="w-full">
+        <li
+          class="hidden md:flex md:flex-row justify-center text-center p-2 font-semibold"
+        >
+          <div class="w-full md:w-[5%] p-2"></div>
+          <div class="w-full md:w-[16%] p-2">Name</div>
+          <div class="w-full md:w-[20%] p-2">Email</div>
+          <div class="w-full md:w-[17%] p-2">Phone Number</div>
+          <div class="w-full md:w-[10%] p-2">Branch</div>
+          <div class="w-full md:w-[10%] p-2">Prospect</div>
+          <div class="w-full md:w-[17%] p-2">Date Added</div>
+          <div class="w-full md:w-[5%] p-2">Action</div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[20%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">07033253454</div>
+          <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
+          <div class="w-full md:w-[10%] p-2">05</div>
+          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/userprofile2.html',this)"
+            >
+              View
+            </p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[20%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">07033253454</div>
+          <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
+          <div class="w-full md:w-[10%] p-2">05</div>
+          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/userprofile2.html',this)"
+            >
+              View
+            </p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[20%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">07033253454</div>
+          <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
+          <div class="w-full md:w-[10%] p-2">05</div>
+          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/userprofile2.html',this)"
+            >
+              View
+            </p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[20%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">07033253454</div>
+          <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
+          <div class="w-full md:w-[10%] p-2">05</div>
+          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/userprofile2.html',this)"
+            >
+              View
+            </p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Seyi Olanrewaju</div>
+          <div class="w-full md:w-[20%] p-2">seyiwaju@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">07033253454</div>
+          <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
+          <div class="w-full md:w-[10%] p-2">05</div>
+          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px] h-[86px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p
+              style="cursor: pointer"
+              onclick="loadPage('../pages/userprofile2.html',this)"
+            >
+              View
+            </p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- Table 2 -->
+    <div
+      id="table2"
+      class="hidden overflow-x-auto"
+      style="height: 370px; font-size: 12px"
+    >
+      <ul class="w-full">
+        <li
+          class="hidden md:flex md:flex-row justify-center text-center p-2 font-semibold"
+        >
+          <div class="w-full md:w-[5%] p-2"></div>
+          <div class="w-full md:w-[16%] p-2">Name</div>
+          <div class="w-full md:w-[20%] p-2">Email</div>
+          <div class="w-full md:w-[17%] p-2">Phone Number</div>
+          <div class="w-full md:w-[10%] p-2">Branch</div>
+          <div class="w-full md:w-[10%] p-2">Prospect</div>
+          <div class="w-full md:w-[17%] p-2">Date Added</div>
+          <div class="w-full md:w-[5%] p-2">Action</div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Jane Doe</div>
+          <div class="w-full md:w-[20%] p-2">janedoe@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">08012345678</div>
+          <div class="w-full md:w-[10%] p-2">Abuja Branch</div>
+          <div class="w-full md:w-[10%] p-2">08</div>
+          <div class="w-full md:w-[17%] p-2">05 Feb 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Jane Doe</div>
+          <div class="w-full md:w-[20%] p-2">janedoe@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">08012345678</div>
+          <div class="w-full md:w-[10%] p-2">Abuja Branch</div>
+          <div class="w-full md:w-[10%] p-2">08</div>
+          <div class="w-full md:w-[17%] p-2">05 Feb 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+        <li
+          class="flex flex-col md:flex-row justify-center text-center border border-gray-300 mb-2 p-2 relative"
+        >
+          <div
+            class="flex justify-center md:justify-start w-full md:w-[40px] lg:w-[40px] p-2"
+          >
+            <img
+              src="/assets/Ellipse 47.png"
+              alt="user"
+              width="32px"
+              height="32"
+              style="border-radius: 50%"
+            />
+          </div>
+          <div class="w-full md:w-[16%] p-2">Jane Doe</div>
+          <div class="w-full md:w-[20%] p-2">janedoe@gmail.com</div>
+          <div class="w-full md:w-[17%] p-2">08012345678</div>
+          <div class="w-full md:w-[10%] p-2">Abuja Branch</div>
+          <div class="w-full md:w-[10%] p-2">08</div>
+          <div class="w-full md:w-[17%] p-2">05 Feb 2023</div>
+          <div
+            class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
+            onclick="actionmenu(event)"
+          >
+            ...
+          </div>
+          <!-- dropdown -->
+          <div
+            id="action-menu"
+            class="action-menu absolute bg-white w-[111px] text-[12px]"
+            style="right: 0; bottom: -50px; display: none"
+          >
+            <p>View</p>
+            <p>Edit</p>
+            <p class="text-[#EE5331]">Suspend</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

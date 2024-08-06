@@ -7,10 +7,16 @@
     <link rel="icon" href="../assets/general/firstBankFavicon.JPG" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/reports.css" />
+    <link rel="stylesheet" href="../styles/reportAll.css" />
     <script src="../scripts/layouts.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="../styles/variables.css" />
+    <link rel="stylesheet" href="../styles/modals.css" />
+    <link rel="stylesheet" href="../styles/chat.css" />
+    <link rel="stylesheet" href="../styles/reports.css" />
+    <link rel="stylesheet" href="../styles/switchmodal.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -105,9 +111,8 @@
           />
         </a>
 
-        <ul class="flex flex-col">
+        <ul id="navList" class="flex flex-col">
           <li class="nav-item bg-[#E6B014] border-l-[3px] pl-8 py-3">
-            <!-- dashboard link -->
             <button
               class="flex gap-[10px] items-center text-white text-[14px] nav-link circularSTD-font"
               onclick="loadPage('../pages/dashboard.html', this)"
@@ -141,7 +146,7 @@
           <li class="nav-item pl-8 py-3">
             <button
               class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              onclick="loadPage('../pages/userprofile2.html', this)"
+              onclick="loadPage('../pages/users.html', this)"
             >
               <img
                 src="../assets/general/prospectsIcon.svg"
@@ -170,10 +175,9 @@
           </li>
 
           <li class="nav-item pl-8 py-3">
-            <!-- reports link -->
             <button
               class="flex items-center gap-[14px] text-white text-[14px] nav-link"
-              onclick="loadPage('../pages/branchprofile.html', this)"
+              onclick="loadPage('../pages/reports.html', this)"
             >
               <img
                 src="../assets/general/reportsIcon.svg"
@@ -189,7 +193,7 @@
           <li class="nav-item pl-8 py-3">
             <button
               class="flex items-center gap-[10px] text-white text-[14px] nav-link"
-              onclick="loadPage('../pages/admin.html', this)"
+              onclick="loadPage('../pages/test.html', this)"
             >
               <img
                 src="../assets/general/settingsIcon.svg"
@@ -268,8 +272,17 @@
                 class="cursor-pointer mt-[3px]"
                 width="15px"
                 height="auto"
+                id="dropdown-toggle"
               />
             </span>
+          </div>
+          <!-- dropdown menu -->
+          <div id="dropdown-menu" class="dropdown">
+            <p onclick="loadPage('../pages/dashboard.html', this)">Dashboard</p>
+            <p onclick="loadPage('../pages/prospects.html', this)">Prospects</p>
+            <p onclick="loadPage('../pages/users.html', this)">Users</p>
+            <p onclick="loadPage('../pages/reports.html', this)">Reports</p>
+            <p onclick="loadPage('../pages/test.html', this)">Admin</p>
           </div>
         </header>
 
@@ -287,6 +300,8 @@
       rel="stylesheet"
     />
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
     <script src="../scripts/dashboard.js"></script>
   </body>
 </html>
