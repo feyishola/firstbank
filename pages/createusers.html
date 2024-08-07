@@ -1,4 +1,197 @@
-<div>create users form</div>
+<div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
+  <h1 class="text-2xl font-bold mb-6">Create a New User</h1>
+  <form id="userForm">
+    <!-- Select creation type and Cancel button -->
+    <div class="mb-6 flex justify-between items-center">
+      <div>
+        <label class="text-customBlue block text-gray-700 font-semibold mb-2"
+          >Select creation type</label
+        >
+        <div class="flex items-center space-x-4">
+          <label class="inline-flex items-center">
+            <input
+              type="radio"
+              id="individualRadio"
+              name="creation-type"
+              value="individual"
+              class="form-radio"
+              checked
+              onclick="toggleSection()"
+            />
+            <span class="ml-2 text-customBlue">Individual</span>
+          </label>
+          <label class="inline-flex items-center">
+            <input
+              type="radio"
+              id="bulkRadio"
+              name="creation-type"
+              value="bulk"
+              class="form-radio"
+              onclick="toggleSection()"
+            />
+            <span class="ml-2 text-customBlue">Bulk Upload</span>
+          </label>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="text-customBlue font-semibold"
+        onclick="loadPage('/pages/users.html',this)"
+      >
+        Cancel
+      </button>
+    </div>
+
+    <!-- Individual form section -->
+    <div id="individualFormSection">
+      <div class="mb-6">
+        <label class="block text-gray-700 font-semibold mb-2"
+          >Fill user information</label
+        >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+          <div>
+            <label
+              for="first-name"
+              class="block text-sm font-medium text-gray-700"
+              >First Name</label
+            >
+            <input
+              type="text"
+              id="first-name"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+              placeholder=""
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="last-name"
+              class="block text-sm font-medium text-gray-700"
+              >Last Name</label
+            >
+            <input
+              type="text"
+              required
+              id="last-name"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+              placeholder=""
+            />
+          </div>
+          <div class="relative">
+            <label for="branch" class="block text-sm font-medium text-gray-700"
+              >Select Branch</label
+            >
+            <select
+              id="branch"
+              required
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3 appearance-none pr-10"
+            >
+              <option value=""></option>
+              <option>Lagos Branch</option>
+              <option>Abuja Branch</option>
+              <option>Kaduna Branch</option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+            >
+              <img class="h-5 w-5 mt-7" src="/assets/arrow.svg" alt="" />
+            </div>
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+              placeholder=""
+              required
+            />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700"
+              >Phone Number</label
+            >
+            <input
+              type="tel"
+              id="phone"
+              class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+              placeholder=""
+              required
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bulk upload section -->
+    <div id="bulkUploadSection" class="hidden">
+      <h3 class="text-lg font-semibold text-gray-700 mb-2">Bulk Upload</h3>
+      <p class="text-gray-600 mb-4">
+        Please ensure the file is in excel (.XLS) format
+      </p>
+      <div class="custom-shadow bg-white p-6 rounded-lg mb-4 text-center">
+        <img
+          src="/assets/upload.svg"
+          alt="upload-icon"
+          style="margin: 0 auto; padding-block: 20px"
+        />
+        <!-- <input
+          type="file"
+          id="fileUpload"
+          class="w-full h-full opacity-0 cursor-pointer"
+        />
+        <p class="txt-upload text-yellow-600 font-bold">
+          Select file
+          <span style="color: #002855">or drag and drop</span>
+        </p> -->
+        <!-- attach file -->
+        <div style="position: relative; display: inline-block; cursor: pointer">
+          <p
+            style="margin-left: 0; margin-top: 7px; cursor: pointer"
+            class="txt-upload text-yellow-600 font-bold"
+          >
+            Select file <span style="color: #002855">or drag and drop</span>
+          </p>
+          <input
+            type="file"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              cursor: pointer;
+            "
+          />
+        </div>
+        <p class="txt-csv text-gray-500">CSV or .XLSX file</p>
+      </div>
+      <div class="flex justify-center">
+        <button
+          class="bg-customBlue text-white flex gap-2 py-2 px-4 rounded-lg hover:bg-customBlue mt-12 mb-6"
+        >
+          <img src="/asset/download.svg" alt="" />
+          Download excel template
+        </button>
+      </div>
+    </div>
+
+    <!-- Submit button -->
+    <div class="flex justify-end mt-6">
+      <button
+        id="createUserButton"
+        type="button"
+        class="px-8 py-2 bg-[var(--secondary-color)] text-white font-semibold rounded-sm shadow-sm hover:bg-[var(--secondary-color)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        onclick="showModal()"
+      >
+        Create Users
+      </button>
+    </div>
+  </form>
+</div>
 
 <!-- modal -->
 <div
@@ -14,17 +207,3 @@
     <button onclick="loadPage('/pages/users.html',this)">Close</button>
   </div>
 </div>
-
-<!-- users form here -->
-<button
-  style="
-    width: 196px;
-    height: 56px;
-    background-color: var(--secondary-color);
-    color: white;
-    border-radius: 5px;
-  "
-  onclick="showModal()"
->
-  Create User
-</button>

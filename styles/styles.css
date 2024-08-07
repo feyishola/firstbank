@@ -55,3 +55,23 @@ img {
   outline: none;
   border: none;
 }
+
+/* here */
+
+.custom-shadow {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  width: auto;
+  height: auto;
+  top: 457px;
+  left: 377px;
+  border-radius: 10px 0px 0px 0px;
+  opacity: 0px;
+}
+.txt-upload {
+  padding-block: 15px;
+}
+.txt-csv {
+  margin-bottom: 30px;
+  font-size: 16px !important;
+  line-height: 20.24px;
+}

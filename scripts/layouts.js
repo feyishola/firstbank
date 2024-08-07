@@ -198,6 +198,25 @@ function showModal3() {
   console.log("hello2");
 }
 
+// function to toggle form
+
+function toggleSection() {
+  const individualFormSection = document.getElementById(
+    "individualFormSection"
+  );
+  const bulkUploadSection = document.getElementById("bulkUploadSection");
+  const individualRadio = document.getElementById("individualRadio");
+  const bulkRadio = document.getElementById("bulkRadio");
+
+  if (individualRadio.checked) {
+    individualFormSection.classList.remove("hidden");
+    bulkUploadSection.classList.add("hidden");
+  } else if (bulkRadio.checked) {
+    individualFormSection.classList.add("hidden");
+    bulkUploadSection.classList.remove("hidden");
+  }
+}
+
 // ***********************************************************
 
 // [4] incomeBreakdownDashboard.html chartjs
