@@ -146,6 +146,21 @@ function showTable2(tableId) {
   });
 }
 
+// Function to toggle Admin tables
+function showTable3(tableId) {
+  const tables = ["table1", "table2", "table3"];
+
+  // Hide all tables and show the selected table
+  tables.forEach((id) => {
+    const table = document.getElementById(id);
+    if (id === tableId) {
+      table.classList.remove("hidden");
+    } else {
+      table.classList.add("hidden");
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("statusbtn");
   btn.addEventListener("click", toggleStatus);
