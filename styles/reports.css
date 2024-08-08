@@ -132,6 +132,7 @@ body {
   font-size: 12px;
   font-weight: 700;
   line-height: 15.18px;
+  text-align: left;
 }
 
 .checkbox-list input {

@@ -93,6 +93,7 @@ body {
   padding: 15px;
   border: 1px solid #7f8b94;
   border-radius: 5px;
+  font-size: 12px;
 }
 .checkbox-container {
   display: flex;
