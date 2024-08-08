@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/general/firstBankFavicon.JPG" />
+    <title>Dashboard | Referral Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/styles.css" />
+  </head>
+  <body class="bg-[#F0F2FA]">
+    <main>
+      <div class="w-full flex">
+        <!-- Login Container -->
+        <div class="flex-1 flex items-center justify-center h-screen">
+          <div class="w-full max-w-md space-y-8 px-4 text-gray-600 sm:px-0">
+            <div class="logo-container w-[200px] lg:h-[66px]">
+              <img
+                src="../assets/firstbank-logo.png"
+                alt="firstbank logo"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <div class="relative">
+              <div class="mb-[30px] sm:mb-[50px]">
+                <h1
+                  class="font-bold text-[20px] text-[#585858] sm:text-[24px] md:text-[26px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px]"
+                >
+                  Referral Management
+                </h1>
+                <p class="text-[11px] text-[#AFB0B1]">
+                  Welcome. Sign up to access the portal.
+                </p>
+              </div>
+            </div>
+            <form onSubmit="event.preventDefault()" class="space-y-5">
+              <span style="font-weight: 700"
+                >Enter the OTP sent to femiade***@fbnng.com</span
+              >
+              <!-- OTP Input Fields -->
+              <div
+                class="otp-container"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin-bottom: 20px;
+                "
+              >
+                <input
+                  type="text"
+                  maxlength="1"
+                  style="
+                    width: 86px;
+                    height: 91px;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 64px;
+                    margin-right: 8px;
+                    border: 1px solid #f5f8fa;
+                  "
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  style="
+                    width: 86px;
+                    height: 91px;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 64px;
+                    margin-right: 8px;
+                    border: 1px solid #f5f8fa;
+                  "
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  style="
+                    width: 86px;
+                    height: 91px;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 64px;
+                    margin-right: 8px;
+                    border: 1px solid #f5f8fa;
+                  "
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  style="
+                    width: 86px;
+                    height: 91px;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 64px;
+                    margin-right: 8px;
+                    border: 1px solid #f5f8fa;
+                  "
+                />
+                <input
+                  type="text"
+                  maxlength="1"
+                  style="
+                    width: 86px;
+                    height: 91px;
+                    text-align: center;
+                    font-weight: 400;
+                    font-size: 64px;
+                    margin-right: 8px;
+                    border: 1px solid #f5f8fa;
+                  "
+                />
+              </div>
+
+              <!-- proceed button back to login-->
+              <a href="../index.html">
+                <button
+                  type="button"
+                  id="proceed-button"
+                  style="
+                    width: 100%;
+                    color: white;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    border-radius: 3px;
+                    font-size: 13px;
+                    margin-top: 100px;
+                    background-color: #ccc;
+                    pointer-events: none;
+                  "
+                >
+                  Proceed
+                </button>
+              </a>
+            </form>
+          </div>
+        </div>
+        <!-- Information Container -->
+        <div
+          class="relative flex-1 hidden items-center justify-center h-screen lg:flex bg-svg-background"
+        >
+          <!-- Help icon -->
+          <div>
+            <img
+              src="../assets/Group 162.png"
+              alt="help icon"
+              class="w-[45px] help-text"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const otpInputs = document.querySelectorAll("input[type='text']");
+      const proceedButton = document.getElementById("proceed-button");
+
+      otpInputs.forEach((input) => {
+        input.addEventListener("input", () => {
+          let allFilled = true;
+          otpInputs.forEach((input) => {
+            if (input.value === "") {
+              allFilled = false;
+            }
+          });
+
+          if (allFilled) {
+            proceedButton.style.backgroundColor = "#002855";
+            proceedButton.style.pointerEvents = "auto";
+          } else {
+            proceedButton.style.backgroundColor = "#142E6533";
+            proceedButton.style.boxShadow = "0px 40px 70px 0px #FF7A001A";
+            proceedButton.style.pointerEvents = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
