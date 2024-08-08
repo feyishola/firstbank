@@ -77,12 +77,12 @@
 
   <!-- toggle buttons -->
   <div
-    class="flex justify-start bg-white flex-col md:flex-row"
-    style="border-top-left-radius: 5px; width: fit-content"
+    class="flex justify-start bg-white w-full md:w-fit"
+    style="border-top-left-radius: 5px"
   >
     <button
       id="button1"
-      class="bg-white text-[#002855] p-2 rounded w-[90px] md:w-[142px]"
+      class="bg-white text-[#002855] p-1 rounded w-[20%] md:w-[99px]"
       onclick="showTable2('table1')"
       style="height: 43px; border-top-left-radius: 5px"
     >
@@ -90,19 +90,35 @@
     </button>
     <button
       id="button2"
-      class="bg-[#002855] text-white p-2 rounded w-[90px] md:w-[142px]"
+      class="bg-[#0277E6] text-white p-1 rounded w-[20%] md:w-[99px]"
       onclick="showTable2('table2')"
       style="height: 43px"
     >
-      Active
+      Open
     </button>
     <button
       id="button3"
-      class="bg-[#C61531] text-white p-2 rounded w-[90px] md:w-[142px]"
+      class="bg-[#00B388] text-white p-1 rounded w-[20%] md:w-[99px]"
       onclick="showTable2('table3')"
       style="height: 43px"
     >
-      Suspended
+      Closed
+    </button>
+    <button
+      id="button3"
+      class="bg-[#FFB946] text-white p-1 rounded w-[20%] md:w-[99px]"
+      onclick="showTable2('table3')"
+      style="height: 43px"
+    >
+      Ongoing
+    </button>
+    <button
+      id="button3"
+      class="bg-[#E30000] text-white p-1 rounded w-[20%] md:w-[99px]"
+      onclick="showTable2('table3')"
+      style="height: 43px"
+    >
+      Out of SLA
     </button>
   </div>
   <!-- Tables -->
@@ -126,7 +142,7 @@
           <div class="w-full md:w-[17%] p-2">Phone Number</div>
           <div class="w-full md:w-[10%] p-2">Branch</div>
           <div class="w-full md:w-[10%] p-2">Prospect</div>
-          <div class="w-full md:w-[17%] p-2">Date Added</div>
+          <div class="w-full md:w-[17%] p-2">Status</div>
           <div class="w-full md:w-[5%] p-2">Action</div>
         </li>
         <li
@@ -148,7 +164,13 @@
           <div class="w-full md:w-[17%] p-2">07033253454</div>
           <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
           <div class="w-full md:w-[10%] p-2">05</div>
-          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div class="w-full md:w-[10%] p-2 flex justify-center">
+            <span
+              class="bg-[#FFB946] text-white w-[75px] h-[18px] flex justify-center"
+              style="border-radius: 5px"
+              >ongoing</span
+            >
+          </div>
           <div
             class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
             onclick="actionmenu(event)"
@@ -190,7 +212,13 @@
           <div class="w-full md:w-[17%] p-2">07033253454</div>
           <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
           <div class="w-full md:w-[10%] p-2">05</div>
-          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div class="w-full md:w-[10%] p-2 flex justify-center">
+            <span
+              class="bg-[#00B388] text-white w-[75px] h-[18px] flex justify-center"
+              style="border-radius: 5px"
+              >closed</span
+            >
+          </div>
           <div
             class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
             onclick="actionmenu(event)"
@@ -232,7 +260,13 @@
           <div class="w-full md:w-[17%] p-2">07033253454</div>
           <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
           <div class="w-full md:w-[10%] p-2">05</div>
-          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div class="w-full md:w-[10%] p-2 flex justify-center">
+            <span
+              class="bg-[#E30000] text-white w-[75px] h-[18px] flex justify-center"
+              style="border-radius: 5px"
+              >out of SLA</span
+            >
+          </div>
           <div
             class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
             onclick="actionmenu(event)"
@@ -274,7 +308,13 @@
           <div class="w-full md:w-[17%] p-2">07033253454</div>
           <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
           <div class="w-full md:w-[10%] p-2">05</div>
-          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div class="w-full md:w-[10%] p-2 flex justify-center">
+            <span
+              class="bg-[#0277E6] text-white w-[75px] h-[18px] flex justify-center"
+              style="border-radius: 5px"
+              >open</span
+            >
+          </div>
           <div
             class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
             onclick="actionmenu(event)"
@@ -316,7 +356,13 @@
           <div class="w-full md:w-[17%] p-2">07033253454</div>
           <div class="w-full md:w-[10%] p-2">Lagos Branch</div>
           <div class="w-full md:w-[10%] p-2">05</div>
-          <div class="w-full md:w-[17%] p-2">01 Jan 2023</div>
+          <div class="w-full md:w-[10%] p-2 flex justify-center">
+            <span
+              class="bg-[#FFB946] text-white w-[75px] h-[18px] flex justify-center"
+              style="border-radius: 5px"
+              >ongoing</span
+            >
+          </div>
           <div
             class="top-div w-full md:w-[5%] p-2 cursor-pointer relative"
             onclick="actionmenu(event)"
