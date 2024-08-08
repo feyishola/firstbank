@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/general/firstBankFavicon.JPG" />
+    <title>Dashboard | Referral Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body class="bg-[#F0F2FA]">
+    <main>
+      <div class="w-full flex">
+        <!-- Login Container -->
+        <div class="flex-1 flex items-center justify-center h-screen">
+          <div class="w-full max-w-md space-y-8 px-4 text-gray-600 sm:px-0">
+            <div class="logo-container w-[200px] lg:h-[66px]">
+              <img
+                src="../assets/firstbank-logo.png"
+                alt="firstbank logo"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <div class="relative">
+              <div class="mb-[30px] sm:mb-[50px]">
+                <h1
+                  class="font-bold text-[20px] text-[#585858] sm:text-[24px] md:text-[26px] lg:text-[28px] xl:text-[30px] 2xl:text-[32px]"
+                >
+                  Referral Management
+                </h1>
+                <p class="text-[11px] text-[#AFB0B1]">
+                  Welcome. Login to your portal account.
+                </p>
+              </div>
+            </div>
+            <form onSubmit="event.preventDefault()" class="space-y-5">
+              <div
+                class="bg-[#fff] pl-[20px] pr-[20px] pb-[8px] pt-[5px] rounded-[5px] box-shadow"
+              >
+                <label for="loginId" class="text-[10px]">Email</label>
+                <div class="flex justify-between mt-[8px]">
+                  <input
+                    type="text"
+                    name="loginId"
+                    id="loginId"
+                    placeholder="enter your email"
+                    class="text-[10px] no-border-on-focus outline-none w-[100%]"
+                  />
+                </div>
+              </div>
+              
+              <a href="../pages/otp.html">
+                <button
+                  type="button"
+                  class="bg-[#002855] w-full text-white pt-[10px] pb-[10px] rounded-[3px] text-[13px] mt-[100px] login-box-shadow"
+                >
+                  Proceed
+                </button>
+              </a>
+              <p style="font-size: 16px;">Don't have an account? <span><a href="../index.html" style="font-weight: 700; color: #002855;" >Login</a></span></p>
+              
+            </form>
+          </div>
+        </div>
+        <!-- Information Container -->
+        <div
+          class="relative flex-1 hidden items-center justify-center h-screen lg:flex bg-svg-background"
+        >
+          <!-- Help icon -->
+          <div>
+            <img
+              src="../assets/Group 162.png"
+              alt="help icon"
+              class="w-[45px] help-text"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
