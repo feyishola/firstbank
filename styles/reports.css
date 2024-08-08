@@ -78,8 +78,8 @@ body {
   line-height: 12px;
 }
 .date-picker {
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center; */
   align-items: baseline;
   margin-bottom: 10px;
   margin-top: 20px;
