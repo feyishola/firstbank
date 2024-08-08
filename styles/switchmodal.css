@@ -129,6 +129,7 @@ body {
   font-size: 12px;
   font-weight: 700;
   line-height: 15.18px;
+  overflow-y: scroll;
 }
 
 .checkbox-list input {

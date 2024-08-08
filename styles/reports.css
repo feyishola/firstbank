@@ -22,6 +22,8 @@ body {
   padding: 30px;
   position: relative;
   overflow: auto;
+  overflow-y: scroll;
+  z-index: 200;
 }
 
 .modal-header {
