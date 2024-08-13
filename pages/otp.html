@@ -154,28 +154,56 @@
       </div>
     </main>
     <script>
-      const otpInputs = document.querySelectorAll("input[type='text']");
-      const proceedButton = document.getElementById("proceed-button");
-
-      otpInputs.forEach((input) => {
-        input.addEventListener("input", () => {
-          let allFilled = true;
-          otpInputs.forEach((input) => {
-            if (input.value === "") {
-              allFilled = false;
+        // Function to validate OTP inputs
+        function validateOtpInputs(inputs) {
+          // Prevent non-numeric input
+          inputs.forEach(input => {
+            input.addEventListener("input", (e) => {
+              e.target.value = e.target.value.replace(/[^0-9]/g, ""); // Allow only numeric input
+              toggleProceedButtonState(inputs);
+            });
+          });
+        }
+      
+        // Function to check if all OTP inputs are filled
+        function areAllInputsFilled(inputs) {
+          return Array.from(inputs).every(input => input.value !== "");
+        }
+      
+        // Function to enable or disable the proceed button
+        function toggleProceedButtonState(inputs) {
+          const proceedButton = document.getElementById("proceed-button");
+          if (areAllInputsFilled(inputs)) {
+            proceedButton.style.backgroundColor = "#002855"; // Set button color to active
+            proceedButton.style.pointerEvents = "auto"; // Enable button click
+          } else {
+            proceedButton.style.backgroundColor = "#142E6533"; // Set button color to inactive
+            proceedButton.style.boxShadow = "0px 40px 70px 0px #FF7A001A"; // Set inactive button shadow
+            proceedButton.style.pointerEvents = "none"; // Disable button click
+          }
+        }
+      
+        // Function to handle proceed button click
+        function handleProceedButtonClick(inputs) {
+          const proceedButton = document.getElementById("proceed-button");
+          proceedButton.addEventListener("click", () => {
+            if (areAllInputsFilled(inputs)) {
+              window.location.href = "./namesetup.html"; // Navigate to the next page
+            } else {
+              alert("Please fill in all OTP fields before proceeding.");
             }
           });
-
-          if (allFilled) {
-            proceedButton.style.backgroundColor = "#002855";
-            proceedButton.style.pointerEvents = "auto";
-          } else {
-            proceedButton.style.backgroundColor = "#142E6533";
-            proceedButton.style.boxShadow = "0px 40px 70px 0px #FF7A001A";
-            proceedButton.style.pointerEvents = "none";
-          }
-        });
-      });
-    </script>
+        }
+      
+        // Main function to initialize the OTP form logic
+        function initOtpForm() {
+          const otpInputs = document.querySelectorAll("input[type='text']");
+          validateOtpInputs(otpInputs);
+          handleProceedButtonClick(otpInputs);
+        }
+      
+        // Initialize the OTP form logic when the DOM is fully loaded
+        document.addEventListener("DOMContentLoaded", initOtpForm);
+      </script>
   </body>
 </html>
